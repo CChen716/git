@@ -1,0 +1,15 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+/target/
+/log/
+.idea
+.idea/
+.classpath
+.project
+.settings
+
+*.iml
+out
+gen

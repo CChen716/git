@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.env.Environment;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.TransactionManager;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -39,10 +40,18 @@ public class Test2_DataSourceConfig extends TestCase {
     @Qualifier("druidDataSource")
     private DataSource druidDataSource;   //性能最优越
 
+    @Autowired
+    private TransactionManager tx;
+
+    @Test
+    public void testTransactionManager(){
+        log.info(tx);
+    }
+
 
     @Test //方式一
     public void testPropertySource(){
-        Assert.assertEquals("mysql.username",dsc.getUsername());
+        Assert.assertEquals("root",dsc.getUsername());
         log.info(dsc.getUsername());
     }
 

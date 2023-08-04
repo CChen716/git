@@ -4,10 +4,11 @@ import com.yc.bean.OpRecord;
 import com.yc.bean.OpType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
-
+@Repository
 public class OpRecordJdbcTemplateImpl implements OpRecordDao{
     private JdbcTemplate jdbcTemplate;
 

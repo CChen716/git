@@ -19,9 +19,9 @@ import static org.junit.Assert.*;
 @ContextConfiguration(classes = {Config.class, DataSourceConfig.class})
 @Log4j2
 public class OpRecordJdbcTemplateImplTest extends TestCase {
+
     @Autowired
     private OpRecordDao opRecordDao;
-
 
     @Test
     public void insertOpRecord() {

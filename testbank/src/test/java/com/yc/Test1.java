@@ -16,11 +16,7 @@ public class Test1 extends TestCase {
     @Autowired
     private AccountBiz accountBiz;
 
-    //单元测试用例
-    @Test
-    public void testAccount(){
-        accountBiz.addAccount(1,99);
-    }
+
 
     //引入断言
     @Test

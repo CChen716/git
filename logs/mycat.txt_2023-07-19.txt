@@ -1,0 +1,1 @@
+2023-07-19 20:04:13,496 main INFO  [src.main.java.Thread.TeacherLX.XL.XunLei] 待下载的文件：https://pm.myapp.com/invc/xfspeed/qqpcmgr/download/QQPCDownload1530.exe的大小：1998856字节

@@ -24,14 +24,14 @@ public class AccountDaoJdbcTemplateImpl implements AccountDao{
 
     @Override
     public int insert(double money) {
-        KeyHolder keyHolder=new GeneratedKeyHolder();
+        KeyHolder keyHolder=new GeneratedKeyHolder();   //通过KeyHolder 取得生成的值
         jdbcTemplate.update(connection->{
-            PreparedStatement ps=connection.prepareStatement("insert into account(balance) values(?)",new String[]{"accountid"});
-            ps.setString(1,money+"");
+            PreparedStatement ps=connection.prepareStatement("insert into accounts(balance) values(?)",new String[]{"accountid"});
+            ps.setString(1,money+"");  // +"" 作用将参数`money`转化为字符串，并设置到占位符位置
             return ps;
         },keyHolder);
-        return keyHolder.getKey().intValue();
-
+        return keyHolder.getKey().intValue(); // 使用`KeyHolder`对象来保存生成的主键值
+                                                //通过`getKey`方法获取生成的主键值，并使用`intValue`方法将其转化为`int`类型并返回。
     }
 
     @Override
